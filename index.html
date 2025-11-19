@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playing Cards Fan</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="images/favicon-32.png"
+      sizes="32x32"
+    />
+    <link rel="apple-touch-icon" href="images/favicon-96.png" sizes="96x96" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="toggle">
+      <input type="checkbox" id="toggle" />
+      <label for="toggle"></label>
+    </div>
+
+    <div class="cards-container">
+      <div class="card-wrapper card1">
+        <div class="card flipped">
+          <div class="card-front">
+            <img src="https://deckofcardsapi.com/static/img/JH.png" alt="JH" />
+          </div>
+          <div class="card-back">
+            <img
+              src="https://deckofcardsapi.com/static/img/back.png"
+              alt="back"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper card2">
+        <div class="card flipped">
+          <div class="card-front">
+            <img src="https://deckofcardsapi.com/static/img/QH.png" alt="QH" />
+          </div>
+          <div class="card-back">
+            <img
+              src="https://deckofcardsapi.com/static/img/back.png"
+              alt="back"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper card3">
+        <div class="card flipped">
+          <div class="card-front">
+            <img src="https://deckofcardsapi.com/static/img/KH.png" alt="KH" />
+          </div>
+          <div class="card-back">
+            <img
+              src="https://deckofcardsapi.com/static/img/back.png"
+              alt="back"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper card4">
+        <div class="card flipped">
+          <div class="card-front">
+            <img src="https://deckofcardsapi.com/static/img/AH.png" alt="AH" />
+          </div>
+          <div class="card-back">
+            <img
+              src="https://deckofcardsapi.com/static/img/back.png"
+              alt="back"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper card5">
+        <div class="card flipped">
+          <div class="card-front">
+            <img src="https://deckofcardsapi.com/static/img/0H.png" alt="10H" />
+          </div>
+          <div class="card-back">
+            <img
+              src="https://deckofcardsapi.com/static/img/back.png"
+              alt="back"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="card-wrapper card6">
+        <div class="card flipped">
+          <div class="card-front">
+            <img src="https://deckofcardsapi.com/static/img/9H.png" alt="9H" />
+          </div>
+          <div class="card-back">
+            <img
+              src="https://deckofcardsapi.com/static/img/back.png"
+              alt="back"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <audio id="flip-sound" src="audio/card-down.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
