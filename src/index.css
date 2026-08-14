@@ -22,28 +22,32 @@ body {
 
 body.light {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
-    url("images/bg-image.webp");
+    url("/images/bg-image.webp");
 }
 
 body.dark {
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
-    url("images/bg-image-2.webp");
+    url("/images/bg-image-2.webp");
 }
 
 .cards-container {
-  position: relative;
-  width: 80%;
-  height: 400px;
+  width: min(90vw, 700px);
+  height: 280px;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  gap: 0;
+  padding-bottom: 20px;
 }
 
 .card-wrapper {
-  position: absolute;
-  width: 120px;
-  height: 180px;
+  position: relative;
+  width: 140px;
+  height: 210px;
   perspective: 1000px;
+  transform-origin: center 220%;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  margin: 0 -35px;
 }
 
 .card {
@@ -81,34 +85,28 @@ body.dark {
 }
 
 .card1 {
-  bottom: 0;
-  left: 5%;
-  transform: rotate(-20deg);
+  transform: rotate(-22deg) translateY(20px);
+  z-index: 1;
 }
 .card2 {
-  bottom: 30px;
-  left: 20%;
-  transform: rotate(-12deg);
+  transform: rotate(-13deg) translateY(10px);
+  z-index: 2;
 }
 .card3 {
-  bottom: 60px;
-  left: 35%;
-  transform: rotate(-6deg);
+  transform: rotate(-5deg);
+  z-index: 3;
 }
 .card4 {
-  bottom: 60px;
-  left: 50%;
-  transform: rotate(6deg);
+  transform: rotate(5deg);
+  z-index: 3;
 }
 .card5 {
-  bottom: 30px;
-  left: 65%;
-  transform: rotate(12deg);
+  transform: rotate(13deg) translateY(10px);
+  z-index: 2;
 }
 .card6 {
-  bottom: 0;
-  left: 80%;
-  transform: rotate(20deg);
+  transform: rotate(22deg) translateY(20px);
+  z-index: 1;
 }
 
 .toggle {
@@ -174,4 +172,51 @@ body.dark {
   left: 50%;
   transform: translateX(-50%);
   animation: float 2s ease-in-out infinite;
+}
+
+.bet-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 20px;
+  /* Prevent shrinking */
+  flex-shrink: 0;
+  width: 200px;
+  z-index: 10;
+  position: relative;
+}
+
+.bet-input-wrapper label {
+  font-size: 14px;
+  font-weight: 500;
+  color: inherit;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.bet-input-wrapper input {
+  width: 100%;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.bet-input-wrapper input:focus {
+  border-color: #57de72;
+  box-shadow: 0 0 0 2px rgba(87, 222, 114, 0.3);
+}
+
+body.dark .bet-input-wrapper input {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+body.dark .bet-input-wrapper input:focus {
+  border-color: #57de72;
 }
